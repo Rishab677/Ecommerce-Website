@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="GROCERYEWEBSITE">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="RISHAB ACHARYA">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocerymandu.com</title>
+    <link rel="stylesheet" href="cs.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #000000;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            text-decoration: none;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+
+        .head {
+            background-color: antiquewhite;
+        }
+
+        .headertext {
+            position: absolute;
+            top: 30%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+
+            /* Updated to center align */
+            color: #fff;
+            font-size: larger;
+            stroke: #fff 2px;
+            float: right;
+
+        }
+
+
+        .flexbox {
+            display: flex;
+            justify-content: flex-end;
+            /* Move the button to the right */
+            align-items: center;
+            height: 100%;
+        }
+
+        .flexbox button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            padding-top: 10px;
+            margin-top: 5px;
+        }
+
+        .flexbox button:hover {
+            background-color: rgb(103, 180, 166);
+            color: rgb(103, 180, 166);
+            border-color: #000000;
+        }
+
+        /* Remove the :after pseudo-element styling */
+        .flexbox button:hover:after {
+            content: none;
+            color: #000000;
+        }
+
+
+
+
+
+
+        .flashsaleheading {
+            color: #cc0000;
+            text-align: center;
+            padding: 1%;
+        }
+
+        /* Product row styles */
+        .productrow {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* Allow products to wrap to the next line if needed */
+            column-gap: 24px;
+
+            color: #fff;
+        }
+
+        /* Product box styles */
+        .productbox {
+            border: 2px;
+            border-color: #d50000;
+            box-shadow: 0 0 10px rgba(0, 0, 0.3);
+            border-radius: 32px;
+            padding: 20px;
+            width: 300px;
+            margin-bottom: 0%;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            /* Adjust the width of each product box as needed */
+        }
+
+        .productbox:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            /* Add a shadow effect on hover */
+            transform: translateY(-5px);
+            /* Move the box slightly up on hover */
+        }
+
+
+        .productbox img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 16px;
+        }
+
+        .productbox .originalprice {
+            font-size: 16px;
+            /* Increased font size */
+            color: #676767;
+            /* Original price color */
+            text-decoration: line-through;
+
+            margin-bottom: 5px;
+        }
+
+        .discountedprice {
+            font-size: 24px;
+            /* Decreased font size */
+            font-weight: bold;
+            color: #d50000;
+            /* Discounted price color */
+            margin-bottom: 10px;
+        }
+
+        .productbox button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            padding-top: 10px;
+        }
+
+        .productbox button:hover {
+            background-color: rgb(103, 180, 166);
+            color: #fff;
+
+            border-color: #000000;
+        }
+
+
+        .pricecontainer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .productrow .productbox .productbox img :hover {
+            box-shadow: 1px 1px 20px;
+
+        }
+
+        .divbox {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin: 10px 0px 0px 0px;
+        }
+
+        .blog {
+            font-size: 30px;
+            background-image: url(/photo/blog3.jpg);
+            height: 700px;
+            overflow: hidden;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .reasearch {
+            font-size: 30px;
+            background-image: url(/photo/reasearch.jpg);
+            height: 700px;
+            overflow: hidden;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .content {
+            color: #fff;
+            font-size: 18px;
+
+
+        }
+
+        .read {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .readbutton {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            padding-top: 10px;
+        }
+
+        .readbutton:hover {
+            background-color: rgb(103, 180, 166);
+            color: #fff;
+            border-color: #000000;
+        }
+
+        .navbarbold a.active {
+            color: #000000;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav bar  -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/photo/Grocerymandu-modified.png" alt="Logo">
+        </div>
+        <!-- search-box -->
+        <div class="searchbox"><b>
+                <form>
+                    <input type="text" placeholder="Search...">
+                    <input type="submit" value="Search">
+                </form>
+        </div>
+        <ul class="navbarbold">
+            <div>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="Reasearch.html">Research</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </div></b>
+        </ul>
+
+        </div>
+
+    </nav>
+
+    <section class="head">
+        <div class="myVideo">
+
+            <img src="/photo/09dce7b7-ea40-406b-a2c0-a3f57c420b17-1657946362-removebg.png" alt="Freshness Image"
+                style="width: 50%; max-width: 800px; height: 60%; margin-top: 20px; ">
+
+            <img src="/photo/iiiiiiii-removebg-preview.png" alt=""
+                style="float:right; width: 30%; max-width: 600px; height: 30%; margin-top: 400px;">
+        </div>
+        <div class="headertext">
+            <h1 style="color: #000000; ">Bringing freshness to your doorstep, Everyday!</h1><br><br>
+            <!-- Add the image here -->
+
+            <div class="flexbox">
+                <button>
+                    <a href="product.html" style="color: #ffffff; height: fit-content;"> Shop Now</a>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <section>
+        <h1 class="flashsaleheading">Flash Sale</h1>
+
+        <div class="productrow">
+
+            <!-- chicken box -->
+
+            <div class="productbox">
+                <a href="product.html">
+                    <img src="/photo/chicken breast.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Chicken Breast</h2>
+                    <p>Start your day right with the first sip of this classic that awakens your senses to new
+                        opportunities.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 285</p>
+                        <p class="originalprice">NRP. 300</p>
+                    </div>
+                    <button>Add to Cart</button>
+            </div>
+            </a>
+            <!-- EGG box -->
+            <div class="productbox">
+                <a href="product.html">
+                    <img src="/photo/egg.jpg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> EGG</h2>
+                    <p>Start your day right with the first sip of this classic that awakens your senses to new
+                        opportunities.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 420</p>
+                        <p class="originalprice">NRP. 450</p>
+                    </div>
+                    <button>Add to Cart</button>
+            </div>
+            </a>
+            <!-- coffee box -->
+            <div class="productbox">
+                <a href="product.html">
+                    <img src="/photo/coffee.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Nescafe Classic Coffee</h2>
+                    <p>Start your day right with the first sip of this classic that awakens your senses to new
+                        opportunities.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 285</p>
+                        <p class="originalprice">NRP. 300</p>
+                    </div>
+                    <button>Add to Cart</button>
+            </div>
+            </a>
+
+            <!-- Milk box -->
+            <div class="productbox">
+                <a href="product.html">
+                    <img src="/photo/milk.jpg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Milk</h2>
+                    <p>Start your day right with the first sip of this classic that awakens your senses to new
+                        opportunities.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 50</p>
+                        <p class="originalprice">NRP. 60</p>
+                    </div>
+                    <button>Add to Cart</button>
+            </div>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- blog page   -->
+    <section>
+
+        <div class="blog">
+
+            <h1 style="text-align: center; color: #fff; margin-top: 90px;">Read: The <span
+                    style="color: red; ">Impact</span> of technology on <span style="color: #ff0000;">Daily</span> Life
+                and Business</h1>
+            <div class="container">
+                <p class="content" style="color: #fff;  max-width: 800px; max-height: fit-content;  ">
+                    There have been changes on the lapse that our local agency Excellence in Town Marketing has been
+                    providing services in the Houston market. While I'm still enjoying rolling the shopping cart through
+                    the aisles of a grocery store, the list is growing for those that prefer to order online their
+                    groceries and either do the pick up or choose for delivery.
+                </p>
+                <div class="read" style="margin-top: 1%; color: #fff;">
+                    <a href="blog.html">
+                        <button class="readbutton">Read More</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- reasearch page -->
+    <section>
+        <div class="reasearch">
+            <h1 style="text-align: center; color: #fff; margin-top: 90px;">A <span style="color: red; ">Journey</span>
+                of Design, Development, and Discovery
+            </h1>
+            <div class="container">
+                <p class="content" style="color: #fff;  max-width: 800px; max-height: fit-content;  ">
+                    In this article, I will take you through the process of building my website, from the initial idea
+                    to the final product. I will share my experiences of designing the layout, choosing the right tools
+                    and technologies, and developing the website step by step. Join me on this journey of creation and
+                    learn about the challenges, triumphs, and insights that I gained while bringing my vision to life.
+                </p>
+                <div class="read" style="margin-top: 1%; color: #fff;">
+                    <a href="blog.html">
+                        <button class="readbutton">Read More</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="footercontent">
+
+            <img src="/photo/Grocerymandu-modified.png" alt="logo">
+
+            <p>Grocerymandu is an e-commerce website for Grocery equipment and accessories. <br>
+                We are the #1 retailer in this category with 100% customer satisfaction outcomes.</p>
+            <hr>
+            <div class="Payment">
+                <h5 style="text-align: end; float:left; color: #ffffff; margin-top: 1%;">Payment Partners:</h5>
+                <img src="/photo/Esewa.png" alt="Esewa" style="float:center;   ">
+                <img src="/photo/khalti.png" alt="khalti" style="float: center; ">
+                <img src="/photo/ime.png" alt="khalti" style="float: left; ">
+                <img src="/photo/mastercard.png" alt="khalti" style="float: left ; ">
+                <img src="/photo/cash on delivery.jpg" alt="khalti" style="float: left; ">
+                <img src="/photo/images.png" alt="Connectips" style="float: left; ">
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <div class="footer">
+        <footer>
+            <p style="color: #fff;">&copy; 2024 Grocerymandu. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

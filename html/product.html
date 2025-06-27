@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="GROCERYEWEBSITE">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="RISHAB ACHARYA">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocerymandu.com</title>
+    <link rel="stylesheet" href="/html/cs.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #000000;
+            box-sizing: border-box;
+            text-decoration: none;
+            overflow-x: hidden;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+
+
+        .flashsaleheading {
+            text-align: center;
+            padding: 1%;
+
+
+        }
+
+        /* Product row styles */
+        .productrow {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* Allow products to wrap to the next line if needed */
+            column-gap: 50px;
+
+            color: #fff;
+        }
+
+    
+        /* Product box styles */
+        .productbox {
+            border: 2px;
+            border-color: #d50000;
+            box-shadow: 0 0 10px rgba(0, 0, 0.3);
+            border-radius: 32px;
+            padding: 20px;
+            width: 300px;
+
+            margin-top: 16px;
+            margin-bottom: 16px;
+            transition: transform 0.1s ease-in-out;
+            /* Adding transition for smooth hover effect */
+        }
+
+        .productbox:hover {
+            transform: translateY(-9px);
+            /* Move the box up slightly on hover */
+        }
+
+        .productbox img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 16px;
+        }
+
+        .productbox .original-price {
+            font-size: 16px;
+            /* Increased font size */
+            color: #676767;
+            /* Original price color */
+            text-decoration: line-through;
+            /* Add strike-through to original price */
+            margin-bottom: 5px;
+        }
+
+        .discountedprice {
+            font-size: 24px;
+            /* Decreased font size */
+            font-weight: bold;
+            color: #d50000;
+            /* Discounted price color */
+            margin-bottom: 10px;
+        }
+
+        .productbox button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .productbox button:hover {
+            background-color: rgb(103, 180, 166);
+        }
+
+        .pricecontainer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .productrow .productbox .productbox img :hover {
+            box-shadow: 1px 1px 20px;
+
+
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .divbox {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin: 10px 0px 0px 0px;
+        }
+
+        .slider {
+            width: 95%;
+            height: 80%;
+            overflow: hidden;
+            margin-top: 6%;
+            margin-left: 2%;
+        }
+
+
+
+
+        .slider img {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav bar  -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/photo/Grocerymandu-modified.png" alt="Logo">
+        </div>
+        <!-- search-box -->
+        <div class="searchbox">
+            <form>
+                <input type="text" placeholder="Search...">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+        <ul class="navbarbold">
+            <div><b>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html" class="active">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="Reasearch.html">Research</a></li>
+                    <li><a href="about.html">About Us</a></li>
+            </div></b>
+        </ul>
+
+    </nav>
+
+
+
+
+    <div class="slider">
+        <div id="slidercontent">
+            <img src="/photo/imageslider3.jpg">
+        </div>
+    </div>
+
+    <section style="margin-top: 2%;">
+        <h1 class="flashsaleheading"> <b style="font-size: larger; color: red;">OUR'S PRODUCTS</b></h1>
+
+        <div class="productrow">
+
+            <!-- chicken box -->
+
+            <div class="productbox">
+                <a href="/description html /chickenbreast.html">
+                    <img src="/photo/chicken breast.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Chicken Breasts</h2>
+                    <p>Boneless skinless chicken breast is the leanest part of a chicken, with the skin and bones
+                        removed. .</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 285</p>
+                        <p class="originalprice">NRP. 300</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+            <!-- EGG box -->
+            <div class="productbox">
+                <a href="/description html /egg.html">
+                    <img src="/photo/egg.jpg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> EGG</h2>
+                    <p>An egg is an organic vessel grown by an animal to carry a possibly fertilized egg cell a zygote.
+                    </p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 420</p>
+                        <p class="originalprice">NRP. 450</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+            <!-- coffee box -->
+            <div class="productbox">
+                <a href="/description html /coffee.html">
+                    <img src="/photo/coffee.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Nescafe Classic Coffee</h2>
+                    <p>Start your day right with the first sip of this classic that awakens your senses to new
+                        opportunities.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 285</p>
+                        <p class="originalprice">NRP. 300</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+            <!-- Milk box -->
+            <div class="productbox">
+                <a href="/description html /milk.html">
+                    <img src="/photo/milk.jpg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Milk</h2>
+                    <p>Milk is the liquid produced by the mammary glands of mammals, including humans.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 50</p>
+                        <p class="originalprice">NRP. 60</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+        </div>
+        <div class="productrow">
+
+            <!-- Donuts box -->
+            <div class="productbox">
+                <a href="/description html /donuts.html">
+                    <img src="/photo/Donuts.jpg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Chocolate Donuts</h2>
+                    <p>Moist and fluffy chocolate glazed donuts are baked, not fried. They’re glazed with a thick
+                        chocolate glaze.</p>
+                    <div class="divbox">
+                        <p class="discounted-price">NRP. 55</p>
+                        <p class="original-price">NRP. 60</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+            <!-- Ramen box -->
+            <div class="productbox">
+                <a href="/description html /ramen.html">
+                    <img src="/photo/ramen.jpg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Ramen Noodles</h2>
+                    <p>Japanese noodle soup, with a combination of a rich flavoured broth, one of a variety of types of
+                        noodle.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 220</p>
+                        <p class="originalprice">NRP. 250</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+            <!-- choclayte box -->
+            <div class="productbox">
+                <a href="/description html /cadbury.html">
+                    <img src="/photo/choclatebar.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Cadbury Celebrations</h2>
+                    <p>A moment of pure magic and unforgettable feeling with all your favourite chocolates inside.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 900</p>
+                        <p class="originalprice">NRP. 950</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+            <!-- honey box -->
+            <div class="productbox">
+                <a href="/description html /dabur.html">
+                    <img src="/photo/honey.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Dabur Honey</h2>
+                    <p>Dabur honey is a delightful and natural sweetener made from the finest quality honey.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 470</p>
+                        <p class="originalprice">NRP. 500</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+
+            </div>
+        </div>
+        <div class="productrow">
+            <!-- jam box -->
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/jam.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Jam</h2>
+                    <p>Jam is a thick sweet food that is made by cooking fruit with a large amount of sugar, and that is
+                        spread on bread.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 185</p>
+                        <p class="originalprice">NRP. 200</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+
+            <!-- basmita chamal box -->
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/ruhab basmati .jpg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Ruhab Basmati Rice</h2>
+                    <p>Basmati rice long grains, intense aroma, fluffy texture, high volume expansion when cooked.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 1199</p>
+                        <p class="originalprice">NRP. 1300</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+            <!-- butter box -->
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/butter.jpg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Butter</h2>
+                    <p>Butter is a dairy product made from separating whole milk or cream into fat and buttermilk.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 130</p>
+                        <p class="originalprice">NRP. 150</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+            <!-- kuch kuch box -->
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/kuchkuch.jpg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Bikaji</h2>
+                    <p>Crispy snack from Bikaner, Rajasthan, made with moth bean flour, gram flour, and spices.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 330</p>
+                        <p class="originalprice">NRP. 350</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- hard and cold drinks section -->
+    <section>
+        <h1 class="flashsaleheading"> <b style="font-size: larger; color: red;"> Hard Drink's And Soft Drinks's </b>
+        </h1>
+        <div class="productrow">
+
+            <!-- Real juice box -->
+
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/RealJuice.jpeg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Real Juice </h2>
+                    <p>It is an amazingly made, healthy blend of fresh fruits, packed with much energy.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 290</p>
+                        <p class="originalprice">NRP. 300</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/slice.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Slice</h2>
+                    <p>Go for 100% fruit juice or fresh fruit instead of sugary packaged juices like Slice and Mazaa.
+                    </p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 120</p>
+                        <p class="originalprice">NRP. 130</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/frooti .jpeg" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Frooti(250 ml)</h2>
+                    <p>Frooti is a mango-flavoured drink sold in India. It is made with natural flavours and
+                        mango-concentrate</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 50</p>
+                        <p class="originalprice">NRP. 65</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/combo pack.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Combo Pack (2L)</h2>
+                    <p>Indulge in the refreshing trio of Coca-Cola, Sprite, and Fanta with our convenient combo pack.
+                    </p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 720</p>
+                        <p class="originalprice">NRP. 750</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+        </div>
+        <div class="productrow">
+
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/Appleslider.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Apple Slider</h2>
+                    <p>Apple juice is the juice from apples. It does not have alcohol, and it tastes sweet from the
+                        natural fruit sugars.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 235</p>
+                        <p class="originalprice">NRP. 250</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/bigmaster.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Big Master</h2>
+                    <p>This is an aromatic deep red wine, smooth in taste, drinkable provide a delightful spice, pepper
+                        and berries.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 1100</p>
+                        <p class="originalprice">NRP. 1200</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/blacklvel.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> Black label(Full)</h2>
+                    <p>A masterful blend of single malt and grain whiskies from across Scotland, aged for at least 12
+                        years.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 9,700</p>
+                        <p class="originalprice">NRP. 10,100</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+            <div class="productbox">
+                <a href="description.html">
+                    <img src="/photo/vodka.png" alt="Product Image" style="height: 260px; width: 260px;">
+                    <h2> 8848 (Full)</h2>
+                    <p>This vodka imported grain spirits with Soft French Winter Wheat and Pure Spring Water from the
+                        Himalayas.</p>
+                    <div class="divbox">
+                        <p class="discountedprice">NRP. 1180</p>
+                        <p class="originalprice">NRP. 1240</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </a>
+            </div>
+        </div>
+
+        </div>
+
+
+
+
+
+
+        </div>
+
+    </section>
+
+
+    <script>
+        var images = ["/photo/imageslider3.jpg", "/photo/imageslider1.png", "/photo/imageslider2.jpg"];
+        var x = 0;
+        var img = document.getElementById("slider-content");
+        setInterval(slider, 3000);
+        function slider() {
+            if (x < images.length) {
+                x = x + 1;
+            } else {
+                x = 1;
+            }
+            img.innerHTML = "<img src=" + images[x - 1] + ">"
+        }
+    </script>
+
+
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="footercontent">
+
+            <img src="/photo/Grocerymandu-modified.png" alt="logo">
+
+            <p>Grocerymandu is an e-commerce website for Grocery equipment and accessories. <br>
+                We are the #1 retailer in this category with 100% customer satisfaction outcomes.</p>
+            <hr>
+            <div class="Payment">
+                <h5 style="text-align: end; float:left; color: #ffffff; margin-top: 1%;">Payment Partners:</h5>
+
+                <img src="/photo/Esewa.png" alt="Esewa" style="float:center;">
+                <img src="/photo/khalti.png" alt="khalti" style="float: center; ">
+                <img src="/photo/ime.png" alt="khalti" style="float: left;">
+                <img src="/photo/mastercard.png" alt="khalti" style="float: left;">
+                <img src="/photo/cash on delivery.jpg" alt="khalti" style="float: left;">
+                <img src="/photo/images.png" alt="Connectips" style="float: left; ">
+            </div>
+        </div>
+
+    </footer>
+
+
+    <div class="footer">
+        <footer>
+            <p style="color: #fff;">&copy; 2024 Grocerymandu. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
